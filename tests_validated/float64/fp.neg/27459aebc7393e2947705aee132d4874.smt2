@@ -5,6 +5,7 @@
 ;;    operation = fp.neg
 ;;
 ;; Test oracle(s) for this test:
+;;    * Host (Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz)
 ;;    * MPFR 4.0.1 (via gmpy2 2.0.8)
 ;;    * PyMPF
 
