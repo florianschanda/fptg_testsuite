@@ -17,7 +17,7 @@
 (set-info :status unsat)
 (set-logic QF_FP)
 
-(define-const input_1 (_ FloatingPoint 15 115) (fp #b0 #b000011101010100 #b101011100100000010011011110001100111100110111100011011101111001010010001110111101111111100010110010010100011000110))
+(define-const input_1 Float128 (fp #b0 #b000011101010100 #b1010111001000000100110111100011001111001101111000110111011110010100100011101111011111111000101110010100011000110))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -28,7 +28,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const input_2 (_ FloatingPoint 15 115) (_ +oo 15 115))
+(define-const input_2 Float128 (_ +oo 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -39,7 +39,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 115) (_ +oo 15 115))
+(define-const expected_result Float128 (_ +oo 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -50,7 +50,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const computed_result (_ FloatingPoint 15 115) (fp.mul RTP input_1 input_2))
+(define-const computed_result Float128 (fp.mul RTP input_1 input_2))
 
 ;; goal
 (assert (not (= expected_result computed_result)))

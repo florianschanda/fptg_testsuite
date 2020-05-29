@@ -17,7 +17,7 @@
 (set-info :status sat)
 (set-logic QF_FP)
 
-(define-const input_1 (_ FloatingPoint 15 115) (_ NaN 15 115))
+(define-const input_1 Float128 (_ NaN 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -28,7 +28,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const input_2 (_ FloatingPoint 15 115) (_ NaN 15 115))
+(define-const input_2 Float128 (_ NaN 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -39,7 +39,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const input_3 (_ FloatingPoint 15 115) (fp #b1 #b000001111000100 #b001011100011100001110111100011100011100000010011111001111110100110001100000101000110010111110010010110111101011010))
+(define-const input_3 Float128 (fp #b1 #b000001111000100 #b0010111000111000011101111000111000111000000100111110011111101001100011000001010001100101111100110110111101011010))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -50,7 +50,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 115) (_ NaN 15 115))
+(define-const expected_result Float128 (_ NaN 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -61,7 +61,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const computed_result (_ FloatingPoint 15 115) (fp.fma RNA input_1 input_2 input_3))
+(define-const computed_result Float128 (fp.fma RNA input_1 input_2 input_3))
 
 ;; goal
 (assert (= expected_result computed_result))

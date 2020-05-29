@@ -15,7 +15,7 @@
 (set-info :status sat)
 (set-logic QF_FP)
 
-(define-const input_1 (_ FloatingPoint 15 115) (fp #b0 #b000000000000000 #b000000111101100011110111100001100111101110001001101101110011101010101101110111000010110011110101000100001001000100))
+(define-const input_1 Float128 (fp #b0 #b000000000000000 #b0000001111011000111101111000011001111011100010011011011100111010101011011101110000101100111101000100001001000100))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False
@@ -26,7 +26,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 115) (fp #b0 #b000000000000000 #b000000111101100011110111100001100111101110001001101101110011101010101101110111000010110011110101000100001001000100))
+(define-const expected_result Float128 (fp #b0 #b000000000000000 #b0000001111011000111101111000011001111011100010011011011100111010101011011101110000101100111101000100001001000100))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False
@@ -37,7 +37,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const computed_result (_ FloatingPoint 15 115) (fp.abs input_1))
+(define-const computed_result Float128 (fp.abs input_1))
 
 ;; goal
 (assert (= expected_result computed_result))

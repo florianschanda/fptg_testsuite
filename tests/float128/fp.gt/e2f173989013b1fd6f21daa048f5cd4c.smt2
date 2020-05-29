@@ -15,7 +15,7 @@
 (set-info :status unsat)
 (set-logic QF_FP)
 
-(define-const input_1 (_ FloatingPoint 15 115) (_ +oo 15 115))
+(define-const input_1 Float128 (_ +oo 15 113))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : False
@@ -26,7 +26,7 @@
 ;;   isFinite    : False
 ;;   isIntegral  : False
 
-(define-const input_2 (_ FloatingPoint 15 115) (fp #b1 #b000000000000000 #b100100101000010010111010010111000110010111001001110110110101001100101001011110100000011010110110111000011110010000))
+(define-const input_2 Float128 (fp #b1 #b000000000000000 #b1001001010000100101110100101110001100101110010011101101101010011001010010111101000000110101101111000011110010000))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False

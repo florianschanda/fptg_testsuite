@@ -17,7 +17,7 @@
 (set-info :status unsat)
 (set-logic QF_FP)
 
-(define-const potato (_ FloatingPoint 15 115) (fp #b1 #b000000000000000 #b010011101100111100010110111101111111100000110100101011100111110000100010011011101111000010011010010001111111110101))
+(define-const potato Float128 (fp #b1 #b000000000000000 #b0100111011001111000101101111011111111000001101001010111001111100001000100110111011110000100110110001111111110101))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False
@@ -28,7 +28,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 115) (fp #b1 #b000000000000000 #b010011101100111100010110111101111111100000110100101011100111110000100010011011101111000010011010010001111111110101))
+(define-const expected_result Float128 (fp #b1 #b000000000000000 #b0100111011001111000101101111011111111000001101001010111001111100001000100110111011110000100110110001111111110101))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False
@@ -39,7 +39,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const computed_result (_ FloatingPoint 15 115) ((_ to_fp 15 115) RNA potato))
+(define-const computed_result Float128 ((_ to_fp 15 113) RNA potato))
 
 ;; goal
 (assert (not (= expected_result computed_result)))

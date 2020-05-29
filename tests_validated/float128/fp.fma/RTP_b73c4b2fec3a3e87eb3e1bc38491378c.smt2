@@ -18,7 +18,7 @@
 (set-info :status sat)
 (set-logic QF_FP)
 
-(define-const input_1 (_ FloatingPoint 15 115) (_ -zero 15 115))
+(define-const input_1 Float128 (_ -zero 15 113))
 ;; should be -0
 ;;   isZero      : True
 ;;   isSubnormal : False
@@ -30,7 +30,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : True
 
-(define-const input_2 (_ FloatingPoint 15 115) (fp #b1 #b000000000000000 #b111011110111001111011010001000110101010001010011011110000101010000100100001010000011000111101001001011011110001011))
+(define-const input_2 Float128 (fp #b1 #b000000000000000 #b1110111101110011110110100010001101010100010100110111100001010100001001000010100000110001111010001011011110001011))
 ;;   isZero      : False
 ;;   isSubnormal : True
 ;;   isNormal    : False
@@ -41,7 +41,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const input_3 (_ FloatingPoint 15 115) (fp #b0 #b011111010001100 #b101100010110110010101001110110000100101011001111010111001111010001100110001000010011000111000101100101111010100000))
+(define-const input_3 Float128 (fp #b0 #b011111010001100 #b1011000101101100101010011101100001001010110011110101110011110100011001100010000100110001110001000101111010100000))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -52,7 +52,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 115) (fp #b0 #b011111010001100 #b101100010110110010101001110110000100101011001111010111001111010001100110001000010011000111000101100101111010100000))
+(define-const expected_result Float128 (fp #b0 #b011111010001100 #b1011000101101100101010011101100001001010110011110101110011110100011001100010000100110001110001000101111010100000))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -63,7 +63,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : False
 
-(define-const computed_result (_ FloatingPoint 15 115) (fp.fma RTP input_1 input_2 input_3))
+(define-const computed_result Float128 (fp.fma RTP input_1 input_2 input_3))
 
 ;; goal
 (assert (= expected_result computed_result))
