@@ -5,8 +5,8 @@
 ;;    operation = fp.abs
 ;;
 ;; Test oracle(s) for this test:
-;;    * Host (Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz)
-;;    * MPFR 4.0.1 (via gmpy2 2.0.8)
+;;    * Host (Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz)
+;;    * MPFR 4.0.2 (via gmpy2 2.0.8)
 ;;    * PyMPF
 
 (set-info :smt-lib-version 2.6)
