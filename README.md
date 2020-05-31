@@ -31,7 +31,7 @@ Benchmarks are included with the following features:
 
   * [PyMPF](https://github.com/florianschanda/PyMPF) (All benchmarks)
   * [MPFR](https://www.mpfr.org) (except for benchmarks using RNA)
-  * Host (except for benchmarks using RNA, and only float32)
+  * Host (except for benchmarks using RNA, and only float32, float64, and x87_extended)
 
 Currently all benchmarks are QF_FP, but in the future (as more tests are added)
 we expect this to also include QF_FPBV and some logic involving reals and integers.
