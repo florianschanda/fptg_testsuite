@@ -6,7 +6,7 @@
 ;;    operation = fp.max
 ;;
 ;; Test oracle(s) for this test:
-;;    * MPFR 4.0.1 (via gmpy2 2.0.8)
+;;    * MPFR 4.0.2 (via gmpy2 2.0.8)
 ;;    * PyMPF
 
 (set-info :smt-lib-version 2.6)
