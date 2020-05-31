@@ -17,7 +17,7 @@
 (set-info :status unsat)
 (set-logic QF_FP)
 
-(define-const potato (_ FloatingPoint 11 5) (fp #b0 #b01110100100 #b1110))
+(define-const potato (_ FloatingPoint 11 6) (fp #b0 #b01110100100 #b11110))
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True

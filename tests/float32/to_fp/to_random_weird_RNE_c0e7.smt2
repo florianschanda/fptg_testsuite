@@ -29,8 +29,8 @@
 ;;   isFinite    : True
 ;;   isIntegral  : True
 
-(define-const expected_result (_ FloatingPoint 8 6) (fp #b0 #b10110010 #b10011))
-;; should be 3588805953060864.0
+(define-const expected_result (_ FloatingPoint 10 4) (fp #b0 #b1000110010 #b101))
+;; should be 3659174697238528.0
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -41,7 +41,7 @@
 ;;   isFinite    : True
 ;;   isIntegral  : True
 
-(define-const computed_result (_ FloatingPoint 8 6) ((_ to_fp 8 6) RNE potato))
+(define-const computed_result (_ FloatingPoint 10 4) ((_ to_fp 10 4) RNE potato))
 
 ;; goal
 (assert (= expected_result computed_result))

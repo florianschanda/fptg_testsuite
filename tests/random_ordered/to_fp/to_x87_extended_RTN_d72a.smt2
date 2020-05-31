@@ -17,8 +17,8 @@
 (set-info :status unsat)
 (set-logic QF_FP)
 
-(define-const potato (_ FloatingPoint 4 6) (fp #b1 #b1110 #b10011))
-;; should be -204.0
+(define-const potato (_ FloatingPoint 4 11) (fp #b1 #b1110 #b0111010011))
+;; should be -186.375
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -27,10 +27,10 @@
 ;;   isNegative  : True
 ;;   isPositive  : False
 ;;   isFinite    : True
-;;   isIntegral  : True
+;;   isIntegral  : False
 
-(define-const expected_result (_ FloatingPoint 15 64) (fp #b1 #b100000000000110 #b100110000000000000000000000000000000000000000000000000000000000))
-;; should be -204.0
+(define-const expected_result (_ FloatingPoint 15 64) (fp #b1 #b100000000000110 #b011101001100000000000000000000000000000000000000000000000000000))
+;; should be -186.375
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
@@ -39,7 +39,7 @@
 ;;   isNegative  : True
 ;;   isPositive  : False
 ;;   isFinite    : True
-;;   isIntegral  : True
+;;   isIntegral  : False
 
 (define-const computed_result (_ FloatingPoint 15 64) ((_ to_fp 15 64) RTN potato))
 

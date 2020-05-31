@@ -17,7 +17,8 @@
 (set-info :status sat)
 (set-logic QF_FP)
 
-(define-const potato (_ FloatingPoint 10 9) (fp #b1 #b1111011101 #b11001101))
+(define-const potato (_ FloatingPoint 6 3) (fp #b1 #b111010 #b01))
+;; should be -167772160.0
 ;;   isZero      : False
 ;;   isSubnormal : False
 ;;   isNormal    : True
